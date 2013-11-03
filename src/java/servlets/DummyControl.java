@@ -23,7 +23,10 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet(name = "DummyControl", urlPatterns = {"/DummyControl"})
 public class DummyControl extends HttpServlet {
     @EJB
-    private BankInterface bankContractBean;
+    private BankInterface bankDummyContractBean;
+//    @EJB
+//    private BankInterface bankContractBean;
+    
     
     
     /**
@@ -48,7 +51,7 @@ public class DummyControl extends HttpServlet {
             out.println("<title>Servlet DummyControl</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet DummyControl at " + bankContractBean.sayHello("Mads") + "</h1>");
+            out.println("<h1>Servlet DummyControl at " + bankDummyContractBean.sayHello("Mads") + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
